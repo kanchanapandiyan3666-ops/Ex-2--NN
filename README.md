@@ -158,12 +158,9 @@ plt.show()
 ```
 
 # OUTPUT:
-```
 ![alt text](<Screenshot 2026-08-18 085444.png>)
 ![alt text](<Screenshot 2026-08-18 085457.png>)
 ![alt text](<Screenshot 2026-08-18 085517.png>)
-
-```
 
 # RESULT:
  Thus, a single layer perceptron model is implemented using python to classify Iris data set.
