@@ -49,7 +49,7 @@ STEP 9:For ‘N ‘ iterations ,do the following:<BR>
 STEP 10:Plot the error for each iteration <BR>
 STEP 11:Print the accuracy<BR>
 # PROGRAM:
-''' 
+```
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -155,14 +155,15 @@ plt.ylabel("Errors")
 
 plt.show()
 
-'''
+```
 
 # OUTPUT:
-'''
+```
 ![alt text](<Screenshot 2026-08-18 085444.png>)
 ![alt text](<Screenshot 2026-08-18 085457.png>)
 ![alt text](<Screenshot 2026-08-18 085517.png>)
-'''
+
+```
 
 # RESULT:
  Thus, a single layer perceptron model is implemented using python to classify Iris data set.
