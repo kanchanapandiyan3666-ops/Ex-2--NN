@@ -2,10 +2,10 @@
 <H3>Register no: 212225230125</H3>
 <H3>Date: 18/08/26</H3>
 <H3>Experiment No. 2 </H3>
+
 ## Implementation of Perceptron for Binary Classification
 # AIM:
 To implement a perceptron for classification using Python<BR>
-
 # EQUIPMENTS REQUIRED:
 Hardware – PCs
 Anaconda – Python 3.7 Installation / Google Colab /Jupiter Notebook
@@ -22,16 +22,8 @@ If we represent samples as vectors of size n, where ‘n’ is the number of its
 f(x)=w.x+b
  <BR>
 A threshold function, usually Heaviside or sign functions, maps the scalar value to a binary output:
-
- 
-
-
 <img width="283" alt="image" src="https://github.com/Lavanyajoyce/Ex-2--NN/assets/112920679/c6d2bd42-3ec1-42c1-8662-899fa450f483">
-
-
 Indeed if the neuron output is exactly zero it cannot be assumed that the sample belongs to the first sample since it lies on the boundary between the two classes. Nonetheless for the sake of simplicity,ignore this situation.<BR>
-
-
 # ALGORITHM:
 STEP 1: Importing the libraries<BR>
 STEP 2:Importing the dataset<BR>
@@ -56,7 +48,6 @@ import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-
 class Perceptron:
     def __init__(self, learning_rate=0.1):
         self.learning_rate = learning_rate
@@ -68,8 +59,6 @@ class Perceptron:
         self.b = 0.0
         self.w = np.zeros(x.shape[1])
         self.misclassified_samples = []
-
-
         for _ in range(n_iter):
             errors = 0
             for xi, yi in zip(x, y):
@@ -84,7 +73,6 @@ class Perceptron:
 
     def predict(self, x):
         return np.where(self.f(x) >= 0, 1, -1)
-
 url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
 df = pd.read_csv(url, header=None)
 print(df.head())
@@ -92,7 +80,6 @@ print(df.head())
 df.describe()
 y = df.iloc[:, 4].values
 x = df.iloc[:, 0:3].values
-
 fig = plt.figure(figsize=(8,6))
 ax = plt.axes(projection='3d')
 
@@ -109,10 +96,8 @@ ax.scatter(x[50:100,0], x[50:100,1], x[50:100,2],
 
 ax.scatter(x[100:150,0], x[100:150,1], x[100:150,2],
            color='green', marker='x', label="Iris Virginica")
-
 plt.legend()
 plt.show()
-
 x = x[0:100, 0:2]
 y = y[0:100]
 
@@ -128,7 +113,6 @@ plt.xlabel("Sepal Length")
 plt.ylabel("Sepal Width")
 plt.legend()
 plt.show()
-
 y = np.where(y == 'Iris-setosa', 1, -1)
 
 x[:,0] = (x[:,0] - x[:,0].mean()) / x[:,0].std()
@@ -154,14 +138,11 @@ plt.xlabel("Epoch")
 plt.ylabel("Errors")
 
 plt.show()
-
 ```
-
 # OUTPUT:
 ![alt text](<Screenshot 2026-08-18 085444.png>)
 ![alt text](<Screenshot 2026-08-18 085457.png>)
 ![alt text](<Screenshot 2026-08-18 085517.png>)
-
 # RESULT:
  Thus, a single layer perceptron model is implemented using python to classify Iris data set.
 
